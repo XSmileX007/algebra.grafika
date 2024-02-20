@@ -7,15 +7,19 @@
   <body>
     <p>Audio zapis</p>
 
+    <!-- audio sadržaj sa kontrolama za play/pause + volume -->
     <audio src="./media/audio/file_example_MP3_700KB.mp3" controls></audio>
 
+    <!-- video sadržaj sa kontrolama za play/pause + volume, play video datoteke sa našeg repozitorija -->
     <video controls width="720" height="404">
       <source src="./media/video/mountains.mp4" type="video/mp4" />
     </video>
 
-    <video controls width="720" height="404">
-      <source src="https://www.youtube.com/sTcHbELHYCk" type="video/mp4" />
-    </video>
+    <!-- audio/video sadržaj sa vanjskog izvora (youtube), nije audio/video kontrola nego je embedano u iframe kontrolu
+      dodan je query parametar autoplay te je stišan volume, odnosno query parametar je postavljen na mute
+     -->
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+    </iframe>
 
     <hr />
     <p>Naša stranica sa <ins>grafičkim</ins> elementima</p>
